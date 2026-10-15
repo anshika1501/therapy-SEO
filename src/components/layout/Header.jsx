@@ -13,12 +13,13 @@ export default function Header({ onOpenBooking }) {
         <div className="flex items-center justify-between h-20 sm:h-24">
           {/* Practice Wordmark */}
           <a href="#" className="group block text-left">
-            <span className="font-serif text-2xl sm:text-[26px] font-semibold tracking-tight text-charcoal-900 group-hover:text-sage-700 transition">
-              Dr. Maya Reynolds<span className="text-terracotta-500 font-serif italic text-xl ml-1">, PsyD</span>
+            <span className="font-serif text-2xl sm:text-[25px] font-semibold tracking-tight text-charcoal-900 group-hover:text-charcoal-700 transition">
+              Dr. Maya Reynolds, PsyD
             </span>
-            <span className="block text-[11px] tracking-widest uppercase text-charcoal-600 font-medium mt-0.5">
-              Psychologist &bull; Santa Monica & Telehealth
+            <span className="block text-[11px] uppercase tracking-wider text-charcoal-600 font-medium mt-0.5">
+              Licensed Clinical Psychologist &bull; Santa Monica, CA
             </span>
+
           </a>
 
           {/* Desktop Navigation */}

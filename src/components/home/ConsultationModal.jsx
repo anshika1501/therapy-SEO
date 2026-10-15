@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { X, CheckCircle, Clock, ShieldCheck } from 'lucide-react';
+import { X, CheckCircle, ShieldCheck } from 'lucide-react';
 import Button from '../common/Button';
 import { therapistProfile } from '../../data/therapyData';
 
@@ -33,10 +33,9 @@ export default function ConsultationModal({ isOpen, onClose }) {
         role="dialog"
         aria-modal="true"
       >
-
         <button
           onClick={onClose}
-          className="absolute top-5 right-5 p-2 rounded-full text-charcoal-600 hover:text-charcoal-900 hover:bg-linen-200 transition"
+          className="absolute top-5 right-5 p-2 rounded-full text-charcoal-600 hover:text-charcoal-900 hover:bg-linen-200 transition cursor-pointer"
           aria-label="Close modal"
         >
           <X className="w-5 h-5" />
@@ -44,16 +43,16 @@ export default function ConsultationModal({ isOpen, onClose }) {
 
         {submitted ? (
           <div className="text-center py-8 space-y-4">
-            <div className="w-14 h-14 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mx-auto">
-              <CheckCircle className="w-7 h-7" />
+            <div className="w-12 h-12 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mx-auto">
+              <CheckCircle className="w-6 h-6" />
             </div>
             <h3 className="font-serif text-2xl font-bold text-charcoal-900">
-              Inquiry Received
+              Message Sent
             </h3>
             <p className="text-charcoal-700 text-sm leading-relaxed max-w-sm mx-auto">
-              Thank you, {formData.name}. Your consultation request has been received with strict medical confidentiality. Dr. Maya Reynolds will personally follow up within 24 business hours to arrange our 15-minute call.
+              Thank you, {formData.name}. Dr. Maya Reynolds will personally follow up within one business day to coordinate your 15-minute consultation.
             </p>
-            <div className="pt-4">
+            <div className="pt-3">
               <Button onClick={handleReset} variant="primary">
                 Return to Site
               </Button>
@@ -62,15 +61,14 @@ export default function ConsultationModal({ isOpen, onClose }) {
         ) : (
           <div>
             <div className="space-y-1 mb-6 text-left">
-              <div className="flex items-center gap-1.5 text-[11px] uppercase tracking-wider font-semibold text-sage-700 mb-1">
-                <Clock className="w-3.5 h-3.5" />
-                <span>Complimentary 15-Minute Phone Consultation</span>
-              </div>
+              <p className="text-xs uppercase tracking-wider font-semibold text-charcoal-600">
+                Initial Inquiry
+              </p>
               <h3 className="font-serif text-2xl font-bold text-charcoal-900">
-                Connect with Dr. Reynolds
+                Schedule a Consultation
               </h3>
               <p className="text-xs text-charcoal-600">
-                Licensed Clinical Psychologist &bull; Santa Monica & California Telehealth
+                Dr. Maya Reynolds, PsyD &bull; Santa Monica & California Telehealth
               </p>
             </div>
 
@@ -84,8 +82,8 @@ export default function ConsultationModal({ isOpen, onClose }) {
                   required
                   value={formData.name}
                   onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                  placeholder="Your full name"
-                  className="w-full px-4 py-2.5 rounded-lg border border-linen-300 bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-600 text-sm text-charcoal-900"
+                  placeholder="Your name"
+                  className="w-full px-4 py-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-700 text-sm text-charcoal-900"
                 />
               </div>
 
@@ -100,7 +98,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                     placeholder="name@example.com"
-                    className="w-full px-4 py-2.5 rounded-lg border border-linen-300 bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-600 text-sm text-charcoal-900"
+                    className="w-full px-4 py-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-700 text-sm text-charcoal-900"
                   />
                 </div>
                 <div>
@@ -113,7 +111,7 @@ export default function ConsultationModal({ isOpen, onClose }) {
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                     placeholder="(310) 000-0000"
-                    className="w-full px-4 py-2.5 rounded-lg border border-linen-300 bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-600 text-sm text-charcoal-900"
+                    className="w-full px-4 py-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-700 text-sm text-charcoal-900"
                   />
                 </div>
               </div>
@@ -125,21 +123,21 @@ export default function ConsultationModal({ isOpen, onClose }) {
                 <select
                   value={formData.serviceInterest}
                   onChange={(e) => setFormData({ ...formData, serviceInterest: e.target.value })}
-                  className="w-full px-4 py-2.5 rounded-lg border border-linen-300 bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-600 text-sm text-charcoal-900"
+                  className="w-full px-4 py-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-700 text-sm text-charcoal-900"
                 >
                   <option value="Anxiety Therapy in Santa Monica">Anxiety Therapy in Santa Monica</option>
                   <option value="Trauma-Informed Counseling in Santa Monica">Trauma-Informed Counseling in Santa Monica</option>
                   <option value="Burnout & Stress Therapy near Santa Monica">Burnout & Stress Therapy near Santa Monica</option>
-                  <option value="General Exploration & Consultation">General Exploration & Consultation</option>
+                  <option value="General Exploration & Questions">General Exploration & Questions</option>
                 </select>
               </div>
 
               <div>
                 <label className="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-1">
-                  Preferred Session Location
+                  Session Format
                 </label>
                 <div className="grid grid-cols-2 gap-3 text-xs">
-                  <label className="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 bg-linen-50 cursor-pointer hover:border-sage-500">
+                  <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 cursor-pointer hover:border-charcoal-400">
                     <input
                       type="radio"
                       name="sessionFormat"
@@ -147,10 +145,9 @@ export default function ConsultationModal({ isOpen, onClose }) {
                       checked={formData.sessionFormat === 'Santa Monica In-Person'}
                       onChange={(e) => setFormData({ ...formData, sessionFormat: e.target.value })}
                     />
-                    <span>Santa Monica (123th St)</span>
-
+                    <span>Santa Monica Office</span>
                   </label>
-                  <label className="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 bg-linen-50 cursor-pointer hover:border-sage-500">
+                  <label className="flex items-center gap-2 p-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 cursor-pointer hover:border-charcoal-400">
                     <input
                       type="radio"
                       name="sessionFormat"
@@ -165,27 +162,26 @@ export default function ConsultationModal({ isOpen, onClose }) {
 
               <div>
                 <label className="block text-xs font-semibold text-charcoal-800 uppercase tracking-wider mb-1">
-                  Brief Note (Optional)
+                  Message (Optional)
                 </label>
                 <textarea
                   rows={3}
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  placeholder="Share anything you'd like Dr. Reynolds to know ahead of our call..."
-                  className="w-full px-4 py-2.5 rounded-lg border border-linen-300 bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-sage-600 text-sm text-charcoal-900"
+                  placeholder="Share anything you would like Dr. Reynolds to know ahead of the call..."
+                  className="w-full px-4 py-2.5 rounded-lg border border-[#E7DFD3] bg-linen-50 focus:bg-white focus:outline-none focus:ring-1 focus:ring-charcoal-700 text-sm text-charcoal-900"
                 />
               </div>
 
               <div className="pt-2">
                 <Button type="submit" className="w-full" variant="primary">
-                  Request Free 15-Minute Consult
+                  Request 15-Minute Consultation
                 </Button>
               </div>
 
-              <div className="flex items-center justify-center gap-1.5 text-[11px] text-charcoal-500 pt-1">
-                <ShieldCheck className="w-3.5 h-3.5 text-sage-600" />
-                <span>Confidential healthcare communication</span>
-              </div>
+              <p className="text-[11px] text-charcoal-500 text-center">
+                Communications are confidential and protected by healthcare privacy laws.
+              </p>
             </form>
           </div>
         )}

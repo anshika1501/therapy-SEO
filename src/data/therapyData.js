@@ -2,11 +2,10 @@ export const therapistProfile = {
   name: "Dr. Maya Reynolds",
   credentials: "PsyD",
   title: "Licensed Clinical Psychologist",
-  fictionalNote: "Fictional Therapist",
   licenseNumber: "PSY 31892",
   location: "Santa Monica, California",
   address: "123th Street 45 W, Santa Monica, CA 90401",
-  telehealthNote: "In-person sessions in Santa Monica & secure telehealth across California",
+  telehealthNote: "In-person sessions in Santa Monica & secure California telehealth",
   email: "care@drmayareynolds.com",
   phone: "(310) 555-0199",
   consultationDuration: "15 minutes",
@@ -14,26 +13,26 @@ export const therapistProfile = {
   officeImages: [
     {
       src: "/images/santa-monica-office-1.jpg",
-      title: "Santa Monica Therapy Suite",
-      description: "A calm, uncluttered sanctuary with natural light and comfortable seating designed to help you settle.",
+      title: "Santa Monica Office",
+      description: "Quiet, private therapy space with natural light on 123th Street.",
     },
     {
       src: "/images/santa-monica-office-2.jpg",
-      title: "Private Consultation Space",
-      description: "Quiet, private space on 123th Street with warm wood accents, dedicated to confidentiality and reflection.",
+      title: "Consultation Room",
+      description: "A comfortable, uncluttered setting designed for focused, confidential conversations.",
     },
   ],
 };
 
 export const heroContent = {
   h1: "Trauma & Anxiety Therapist in Santa Monica | Dr. Maya Reynolds, PsyD",
-  subhead: "When high expectations, unhealed past experiences, or constant anxiety leave you feeling drained, you don't have to navigate it alone. In our calm Santa Monica office or through secure California telehealth, we work together to help your mind and body feel settled again. You deserve a space where you can breathe, heal, and reconnect with your genuine self.",
+  subhead: "If you feel functional on the outside while quietly carrying constant worry, tension, or exhaustion, you don't have to navigate it alone. From my quiet Santa Monica office or through secure California telehealth, we work together to understand root causes and build lasting relief. Therapy is a grounded, collaborative space where you can slow down and feel like yourself again.",
   primaryCTA: "Schedule a Free 15-Minute Consult",
   secondaryCTA: "Explore My Approach",
   trustBadges: [
-    "PsyD Licensed Clinical Psychologist",
+    "Licensed Clinical Psychologist (PSY 31892)",
     "EMDR Certified Practitioner",
-    "Santa Monica Office & CA Telehealth",
+    "Santa Monica Office & California Telehealth",
   ],
 };
 
@@ -41,28 +40,28 @@ export const servicesData = [
   {
     id: "anxiety",
     title: "Anxiety Therapy in Santa Monica",
-    description: "If persistent worry and perfectionism leave your nervous system in overdrive, anxiety therapy in Santa Monica provides a supportive space to uncover root triggers. Together, we'll build gentle, evidence-based coping tools to help you quiet mental chatter and find sustained peace.",
+    description: "If persistent worry, overthinking, and perfectionism make it difficult to relax or sleep, anxiety therapy in Santa Monica provides practical tools to understand your triggers and help your body feel calm day to day.",
     tags: ["Panic & Chronic Worry", "High-Functioning Anxiety", "Nervous System Regulation"],
     audience: "Adults feeling mentally overwhelmed, overthinking, or emotionally on edge.",
   },
   {
     id: "trauma",
     title: "Trauma-Informed Counseling in Santa Monica",
-    description: "For adults carrying the weight of painful past experiences, trauma-informed counseling in Santa Monica pairs compassionate care with EMDR and somatic techniques. You can process unresolved wounds at your own pace and finally reclaim a felt sense of safety in your everyday life.",
-    tags: ["EMDR Reprocessing", "Single-Incident & Complex Trauma", "Somatic Grounding"],
-    audience: "Adults navigating single-incident or childhood trauma, relationship triggers, or emotional wounds.",
+    description: "For adults navigating single-incident or childhood trauma, trauma-informed counseling in Santa Monica combines EMDR and evidence-based care to process painful experiences safely so you can feel stable in your daily life.",
+    tags: ["EMDR Therapy", "Single-Incident & Complex Trauma", "Somatic Grounding"],
+    audience: "Adults dealing with painful memories, relationship triggers, or emotional wounds.",
   },
   {
     id: "burnout",
     title: "Burnout & Stress Therapy near Santa Monica",
-    description: "Designed specifically for busy professionals and high-achievers feeling chronically depleted, burnout & stress therapy near Santa Monica helps restore your vitality. We will establish healthy boundaries and nervous system regulation so you can thrive without sacrificing your well-being.",
-    tags: ["Executive & Creative Burnout", "Internal Perfectionism", "Sustainable Living"],
-    audience: "Entrepreneurs, creatives, and professionals feeling disconnected after years of chronic stress.",
+    description: "Designed for entrepreneurs, creatives, and professionals feeling chronically depleted, burnout & stress therapy near Santa Monica helps you establish healthy boundaries, recover from exhaustion, and build sustainable ways of living and working.",
+    tags: ["Professional & Executive Burnout", "High Internal Pressure", "Work-Life Boundaries"],
+    audience: "Professionals who feel disconnected after years of pushing through stress.",
   },
 ];
 
 export const aboutContent = {
-  headline: "A warm, collaborative, and grounded approach to healing.",
+  headline: "A warm, collaborative, and grounded approach to therapy.",
   paragraphs: [
     "I’m a licensed clinical psychologist based in Santa Monica, California, offering therapy for adults who feel overwhelmed by anxiety, stress, or the lingering effects of past experiences. Many of the people I work with are high-achieving, thoughtful, and self-aware—but internally feel exhausted, stuck in overthinking, or emotionally on edge.",
     "My work often focuses on anxiety, panic, trauma, and burnout. Clients frequently come to me feeling “functional” on the outside while quietly struggling with constant worry, tension in their body, difficulty sleeping, or a sense that they’re always bracing for something to go wrong. Others are navigating the impact of earlier life experiences that continue to affect their relationships, confidence, or sense of safety.",
@@ -78,41 +77,41 @@ export const aboutContent = {
 export const approaches = [
   {
     name: "EMDR Therapy",
-    tagline: "Reprocessing deep-seated trauma",
-    description: "Eye Movement Desensitization and Reprocessing helps your brain re-file distressing memories so they no longer trigger an acute fight-or-flight response in your present life.",
+    tagline: "Processing unresolved trauma",
+    description: "Eye Movement Desensitization and Reprocessing helps your brain reprocess distressing memories so they no longer trigger acute emotional or physical distress in your daily life.",
   },
   {
     name: "Cognitive Behavioral Therapy (CBT)",
-    tagline: "Reframing unhelpful thought cycles",
-    description: "Identify how automatic catastrophic thoughts fuel anxious emotions and learn grounded, realistic mental strategies to break free from cycles of self-doubt.",
+    tagline: "Addressing automatic thought cycles",
+    description: "Identify how automatic catastrophic thinking and internal perfectionism fuel anxiety, and learn realistic cognitive strategies to break recurring cycles of stress.",
   },
   {
     name: "Body-Oriented & Somatic Care",
     tagline: "Reconnecting mind and body",
-    description: "Trauma and stress live in the physical body. We tune into bodily sensations, helping your nervous system release trapped survival energy and re-establish felt safety.",
+    description: "Anxiety and trauma often manifest physically as tight muscles, shallow breathing, and chronic tension. We focus on bodily cues to help your nervous system feel settled.",
   },
   {
     name: "Mindfulness & Grounding",
-    tagline: "Anchoring in the here and now",
-    description: "Breathwork, sensory orientation, and mindful awareness practices that empower you to gently pause racing thoughts during everyday moments of high stress.",
+    tagline: "Present-moment awareness",
+    description: "Practical breathing and grounding tools to interrupt overthinking and help you stay anchored during high-stress situations.",
   },
 ];
 
 export const faqs = [
   {
     question: "What happens during the free 15-minute consultation?",
-    answer: "Our consultation is a relaxed, zero-pressure phone or video call. We'll discuss what brings you to therapy, what you hope to work through, and ensure my approach aligns with your needs. You can ask any questions about scheduling, fees, or session formats.",
+    answer: "Our consultation is a brief, informal phone or video call. We will talk about what brings you to therapy, what kind of support you are looking for, and make sure my practice is a good fit for your goals. You can ask any questions about scheduling, session format, or fees.",
   },
   {
-    question: "Do you offer in-person sessions in Santa Monica?",
-    answer: "Yes. In-person therapy takes place in my serene, private Santa Monica office at 123th Street 45 W. It is designed to feel welcoming, peaceful, and confidential with natural light.",
+    question: "Where is your office located?",
+    answer: "My office is located at 123th Street 45 W in Santa Monica, CA 90401. It is a quiet, private space with natural light and easy street parking.",
   },
   {
-    question: "Can I do telehealth if I live elsewhere in California?",
-    answer: "Absolutely. I am fully licensed to provide secure, HIPAA-compliant telehealth therapy to adult residents living anywhere in the state of California (Los Angeles, San Francisco Bay Area, San Diego, Orange County, etc.).",
+    question: "Do you offer online therapy?",
+    answer: "Yes. I provide secure, HIPAA-compliant video therapy to adults located anywhere in California, including Los Angeles, the San Francisco Bay Area, and San Diego.",
   },
   {
-    question: "How does EMDR therapy work for trauma and anxiety?",
-    answer: "EMDR utilizes bilateral stimulation (such as side-to-side eye movements or gentle tapping) while focusing on specific memories or triggers. This stimulates the brain's natural information processing system, reducing the emotional charge and vividness of difficult experiences.",
+    question: "How do fees and insurance work?",
+    answer: "I am an out-of-network provider. I provide a monthly itemized receipt (superbill) that you can submit to your PPO insurance for potential reimbursement, depending on your out-of-network benefits.",
   },
 ];

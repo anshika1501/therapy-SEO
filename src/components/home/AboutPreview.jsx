@@ -6,14 +6,14 @@ import { therapistProfile, aboutContent } from '../../data/therapyData';
 
 export default function AboutPreview({ onOpenBooking }) {
   return (
-    <section id="about" className="py-20 sm:py-28 bg-[#FCFAF6] border-b border-[#E7DFD3]">
+    <section id="about" className="py-20 sm:py-24 bg-[#FCFAF6] border-b border-[#E7DFD3]">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-start">
-          {/* Left Column: Portrait & Credentials */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-14 items-start">
+          {/* Left Column: Doctor Portrait */}
           <div className="lg:col-span-5 lg:sticky lg:top-28">
             <FadeIn direction="up">
               <div className="mx-auto max-w-sm lg:max-w-none">
-                <div className="p-4 bg-[#F2EDE3] rounded-2xl border border-[#E0D6C6] shadow-paper">
+                <div className="bg-[#F2EDE3] p-3 rounded-2xl border border-[#E0D6C6]">
                   <div className="aspect-[4/5] rounded-xl overflow-hidden bg-[#E6DDD1]">
                     <img
                       src={therapistProfile.image}
@@ -22,27 +22,17 @@ export default function AboutPreview({ onOpenBooking }) {
                       loading="lazy"
                     />
                   </div>
-                  <div className="mt-4 text-center space-y-1">
-                    <h3 className="font-serif text-charcoal-900 font-bold text-xl">
+                  <div className="pt-3 px-1 text-center space-y-0.5">
+                    <h3 className="font-serif text-charcoal-900 font-bold text-lg">
                       {therapistProfile.name}, {therapistProfile.credentials}
                     </h3>
-                    <p className="text-xs uppercase tracking-wider text-charcoal-600 font-medium">
-                      {therapistProfile.title}
+                    <p className="text-xs text-charcoal-600">
+                      {therapistProfile.title} &bull; {therapistProfile.licenseNumber}
                     </p>
-                    <p className="text-xs text-sage-700">
+                    <p className="text-xs text-charcoal-600">
                       {therapistProfile.address}
                     </p>
                   </div>
-                </div>
-
-                {/* Personal Practice Philosophy Note */}
-                <div className="mt-6 p-5 rounded-xl bg-[#F9F6F0] border border-[#E7DFD3] text-xs text-charcoal-700 space-y-2">
-                  <p className="font-serif font-semibold text-charcoal-900 text-sm">
-                    Clinical Modalities
-                  </p>
-                  <p className="leading-relaxed">
-                    Doctoral training in Clinical Psychology (PsyD) &bull; Certified EMDR Practitioner &bull; Cognitive Behavioral Therapy (CBT) &bull; Somatic Grounding & Mindfulness.
-                  </p>
                 </div>
               </div>
             </FadeIn>
@@ -51,41 +41,36 @@ export default function AboutPreview({ onOpenBooking }) {
           {/* Right Column: Full Authentic About Text from PDF */}
           <div className="lg:col-span-7 space-y-6 text-left">
             <FadeIn direction="up">
-              <p className="text-xs uppercase tracking-widest font-semibold text-sage-700">
-                Meet Dr. Reynolds
+              <p className="text-xs uppercase tracking-wider font-semibold text-charcoal-600 mb-1">
+                Background & Philosophy
               </p>
-              <h2 className="text-3xl sm:text-4xl md:text-[38px] font-serif text-charcoal-900 leading-tight mt-1 mb-4">
+              <h2 className="text-3xl sm:text-4xl font-serif text-charcoal-900 leading-tight">
                 About Dr. Maya Reynolds, PsyD
               </h2>
             </FadeIn>
 
-            <div className="space-y-5 text-charcoal-700 text-base leading-relaxed font-normal">
+            <div className="space-y-4 text-charcoal-700 text-base leading-relaxed font-normal">
               {aboutContent.paragraphs.map((paragraph, idx) => (
-                <FadeIn key={idx} delay={idx * 60} direction="up">
-                  <p className="leading-[1.75]">
+                <FadeIn key={idx} delay={idx * 40} direction="up">
+                  <p className="leading-relaxed">
                     {paragraph}
                   </p>
                 </FadeIn>
               ))}
             </div>
 
-            {/* Handwritten-style authentic sign-off */}
-            <FadeIn delay={200} direction="up">
-              <div className="pt-6 border-t border-[#E7DFD3] space-y-1">
-                <p className="font-serif italic text-xl text-charcoal-900">
-                  Warmly,
-                </p>
-                <p className="font-serif font-bold text-lg text-charcoal-900">
-                  Dr. Maya Reynolds, PsyD
-                </p>
-                <p className="text-xs text-charcoal-600">
-                  Licensed Clinical Psychologist &bull; Santa Monica, California
-                </p>
-              </div>
-
-              <div className="pt-6">
-                <Button onClick={onOpenBooking} variant="primary" className="text-xs uppercase tracking-widest font-semibold">
-                  Schedule a Free 15-Minute Consult
+            <FadeIn delay={150} direction="up">
+              <div className="pt-4 border-t border-[#E7DFD3] flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4">
+                <div>
+                  <p className="font-serif font-bold text-base text-charcoal-900">
+                    Dr. Maya Reynolds, PsyD
+                  </p>
+                  <p className="text-xs text-charcoal-600">
+                    Licensed Clinical Psychologist &bull; Santa Monica, California
+                  </p>
+                </div>
+                <Button onClick={onOpenBooking} variant="primary" className="text-xs uppercase tracking-wider font-semibold">
+                  Schedule Free Consult
                 </Button>
               </div>
             </FadeIn>
