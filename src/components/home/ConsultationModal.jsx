@@ -27,12 +27,13 @@ export default function ConsultationModal({ isOpen, onClose }) {
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm animate-fadeIn">
+    <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-charcoal-900/60 backdrop-blur-sm transition-all duration-300 animate-landing-fade">
       <div
-        className="bg-linen-100 rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-editorial border border-linen-300 relative max-h-[92vh] overflow-y-auto"
+        className="bg-[#F9F6F0] rounded-2xl max-w-lg w-full p-6 sm:p-8 shadow-editorial border border-[#E7DFD3] relative max-h-[92vh] overflow-y-auto animate-landing-reveal"
         role="dialog"
         aria-modal="true"
       >
+
         <button
           onClick={onClose}
           className="absolute top-5 right-5 p-2 rounded-full text-charcoal-600 hover:text-charcoal-900 hover:bg-linen-200 transition"
