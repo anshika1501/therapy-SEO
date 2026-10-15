@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import { ChevronDown, ChevronUp, HelpCircle } from 'lucide-react';
+import { Plus, Minus } from 'lucide-react';
 import Container from '../common/Container';
-import SectionHeading from '../common/SectionHeading';
 import { faqs } from '../../data/therapyData';
 
 export default function TestimonialsFAQ() {
@@ -12,38 +11,41 @@ export default function TestimonialsFAQ() {
   };
 
   return (
-    <section id="faq" className="py-20 sm:py-24 bg-linen-100">
+    <section id="faq" className="py-20 sm:py-24 bg-linen-100 border-b border-linen-300/80">
       <Container>
-        <SectionHeading
-          eyebrow="Common Inquiries"
-          title="Frequently Asked Questions"
-          subtitle="Answers to common questions about starting therapy, Santa Monica sessions, and California telehealth."
-        />
+        <div className="max-w-2xl mx-auto text-center mb-14">
+          <p className="text-xs uppercase tracking-widest font-semibold text-sage-700 mb-3">
+            Questions & Clarity
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-serif text-charcoal-900 leading-tight">
+            Frequently Asked Questions
+          </h2>
+          <p className="mt-4 text-base text-charcoal-700 leading-relaxed font-normal">
+            Clear information about starting therapy, Santa Monica in-person appointments, and California telehealth.
+          </p>
+        </div>
 
-        <div className="max-w-3xl mx-auto space-y-4">
+        <div className="max-w-3xl mx-auto divide-y divide-linen-300 border-y border-linen-300">
           {faqs.map((faq, index) => {
             const isOpen = openIndex === index;
             return (
-              <div
-                key={index}
-                className="border border-linen-300 rounded-2xl bg-linen-50/70 overflow-hidden transition-all duration-200"
-              >
+              <div key={index} className="py-6">
                 <button
                   type="button"
                   onClick={() => toggleFaq(index)}
-                  className="w-full text-left px-6 py-5 flex items-center justify-between gap-4 hover:bg-sage-50/60 focus:outline-none transition"
+                  className="w-full text-left flex items-start justify-between gap-6 focus:outline-none group"
                   aria-expanded={isOpen}
                 >
-                  <span className="font-serif text-lg font-bold text-charcoal-900">
+                  <span className="font-serif text-lg sm:text-xl text-charcoal-900 group-hover:text-sage-700 transition-colors">
                     {faq.question}
                   </span>
-                  <div className="w-8 h-8 rounded-full bg-linen-200 flex items-center justify-center text-charcoal-700 shrink-0">
-                    {isOpen ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-                  </div>
+                  <span className="mt-1 text-sage-600 shrink-0">
+                    {isOpen ? <Minus className="w-5 h-5" /> : <Plus className="w-5 h-5" />}
+                  </span>
                 </button>
 
                 {isOpen && (
-                  <div className="px-6 pb-6 pt-1 text-charcoal-700 text-sm sm:text-base leading-relaxed border-t border-linen-200/80">
+                  <div className="mt-4 text-charcoal-700 text-sm sm:text-base leading-relaxed pr-8">
                     {faq.answer}
                   </div>
                 )}

@@ -1,81 +1,75 @@
 import React from 'react';
-import { Award, GraduationCap, MapPin, Sparkles } from 'lucide-react';
 import Container from '../common/Container';
 import Button from '../common/Button';
 import { therapistProfile } from '../../data/therapyData';
 
 export default function AboutPreview({ onOpenBooking }) {
   return (
-    <section id="about" className="py-20 sm:py-24 bg-linen-200/40 border-y border-linen-300">
+    <section id="about" className="py-20 sm:py-24 bg-linen-50 border-b border-linen-300/80">
       <Container>
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-          {/* Left Column: Doctor Profile Photo / Vignette */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
+          {/* Left Column: Authentic Portrait of Dr. Maya Reynolds (Image Preserved Exactly) */}
           <div className="lg:col-span-5">
-            <div className="relative">
-              <div className="aspect-[3/4] rounded-3xl overflow-hidden shadow-elevated bg-sage-200">
-                <img
-                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
-                  alt="Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist in Santa Monica"
-                  className="w-full h-full object-cover object-top"
-                  loading="lazy"
-                />
-              </div>
-
-              {/* Verified Badge Overlay */}
-              <div className="absolute -bottom-6 -right-4 sm:right-6 bg-linen-100 p-4 rounded-2xl shadow-soft border border-linen-300 max-w-xs">
-                <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 shrink-0">
-                    <Award className="w-5 h-5" />
-                  </div>
-                  <div>
-                    <p className="text-xs font-bold text-charcoal-900">Dr. Maya Reynolds, PsyD</p>
-                    <p className="text-[11px] text-charcoal-600">Licensed Clinical Psychologist (PSY 31892)</p>
-                  </div>
+            <div className="relative mx-auto max-w-sm lg:max-w-none">
+              <div className="p-3 sm:p-4 bg-linen-100 rounded-2xl border border-linen-300 shadow-editorial">
+                <div className="aspect-[3/4] rounded-xl overflow-hidden bg-linen-300">
+                  <img
+                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                    alt="Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist in Santa Monica"
+                    className="w-full h-full object-cover object-top"
+                    loading="lazy"
+                  />
+                </div>
+                <div className="mt-3 text-center">
+                  <p className="font-serif text-charcoal-900 font-semibold text-sm">
+                    Dr. Maya Reynolds, PsyD
+                  </p>
+                  <p className="text-xs text-charcoal-600">
+                    California License PSY 31892
+                  </p>
                 </div>
               </div>
             </div>
           </div>
 
-          {/* Right Column: Bio & Philosophy */}
+          {/* Right Column: Grounded Human Narrative */}
           <div className="lg:col-span-7 space-y-6">
-            <span className="text-xs uppercase tracking-widest font-semibold text-sage-600 bg-sage-100/70 px-3.5 py-1 rounded-full">
-              About Dr. Reynolds
-            </span>
+            <p className="text-xs uppercase tracking-widest font-semibold text-sage-700">
+              Meet Dr. Reynolds
+            </p>
             <h2 className="text-3xl sm:text-4xl font-serif text-charcoal-900 leading-tight">
-              A collaborative, compassionate partner in your healing process.
+              A collaborative, compassionate space where you can let down your guard.
             </h2>
-            <div className="space-y-4 text-charcoal-700 text-base leading-relaxed">
+            <div className="space-y-4 text-charcoal-700 text-sm sm:text-base leading-relaxed font-normal">
               <p>
-                As a licensed clinical psychologist based in Santa Monica, I work with high-achieving adults, professionals, and creatives who feel internally drained despite maintaining an outward appearance of having everything together.
+                I specialize in working with high-functioning adults, professionals, and creatives throughout Santa Monica and California who find themselves caught in cycles of perfectionism, burnout, and unspoken emotional strain.
               </p>
               <p>
-                My practice is rooted in warmth, empathy, and scientific grounding. Rather than offering one-size-fits-all advice, I integrate cognitive-behavioral tools with EMDR and somatic nervous system regulation to help you resolve the deeper sources of trauma and constant worry.
+                Therapy with me is not a passive lecture or a detached clinical exercise. It is a genuine, warm partnership. Together, we explore what your nervous system has been carrying, unravel old protective patterns that no longer serve you, and build reliable internal safety.
               </p>
               <p>
-                Whether you sit across from me in my calm Santa Monica office or connect via secure California telehealth from the comfort of your home, you will find an unhurried, confidential atmosphere where you can be fully human.
+                Whether meeting in my private Santa Monica office or through secure telehealth, our goal is the same: to help you feel rooted, clear-minded, and at home in your own life again.
               </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2">
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-linen-100 border border-linen-300">
-                <GraduationCap className="w-5 h-5 text-sage-600 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-semibold text-charcoal-900">Doctor of Psychology (PsyD)</h4>
-                  <p className="text-xs text-charcoal-600">Doctoral training in Clinical Psychology & EMDR</p>
-                </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-2 text-xs text-charcoal-700">
+              <div className="p-4 rounded-lg bg-linen-100 border border-linen-300/80">
+                <span className="font-semibold block text-charcoal-900 mb-1">Clinical Credentials</span>
+                <p className="text-charcoal-600 leading-relaxed">
+                  Doctorate in Clinical Psychology (PsyD) &bull; Certified in EMDR &bull; Somatic Grounding Specialist
+                </p>
               </div>
 
-              <div className="flex items-start gap-3 p-3.5 rounded-xl bg-linen-100 border border-linen-300">
-                <MapPin className="w-5 h-5 text-sage-600 shrink-0 mt-0.5" />
-                <div>
-                  <h4 className="text-sm font-semibold text-charcoal-900">Santa Monica & California</h4>
-                  <p className="text-xs text-charcoal-600">Montana Avenue practice + Statewide Telehealth</p>
-                </div>
+              <div className="p-4 rounded-lg bg-linen-100 border border-linen-300/80">
+                <span className="font-semibold block text-charcoal-900 mb-1">Session Locations</span>
+                <p className="text-charcoal-600 leading-relaxed">
+                  Montana Avenue office in Santa Monica, CA + secure HIPAA-compliant video sessions across all of California.
+                </p>
               </div>
             </div>
 
             <div className="pt-2">
-              <Button onClick={onOpenBooking}>
+              <Button onClick={onOpenBooking} variant="primary">
                 Book a Free 15-Minute Consult
               </Button>
             </div>

@@ -105,14 +105,15 @@ export default function Footer({ onOpenBooking }) {
 
           <div className="flex flex-col sm:flex-row justify-between items-center pt-4 text-linen-400 gap-2">
             <p>
-              © {new Date().getFullYear()} Dr. Maya Reynolds, PsyD. All rights reserved. Santa Monica, CA.
+              © {new Date().getFullYear()} Dr. Maya Reynolds, PsyD &bull; California Licensed Psychologist (PSY 31892).
             </p>
-            <p className="flex items-center gap-1">
-              Crafted with <Heart className="w-3.5 h-3.5 text-terracotta-400 inline" /> for compassionate healing.
+            <p>
+              Montana Avenue &bull; Santa Monica, California 90403
             </p>
           </div>
         </div>
       </Container>
     </footer>
+
   );
 }

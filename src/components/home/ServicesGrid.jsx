@@ -1,73 +1,73 @@
 import React from 'react';
-import { Sparkles, ShieldCheck, FlameKindling, ArrowUpRight } from 'lucide-react';
+import { ArrowRight } from 'lucide-react';
 import Container from '../common/Container';
 import SectionHeading from '../common/SectionHeading';
 import { servicesData } from '../../data/therapyData';
 
-const iconMap = {
-  Sparkles: Sparkles,
-  ShieldCheck: ShieldCheck,
-  FlameKindling: FlameKindling,
-};
-
 export default function ServicesGrid({ onOpenBooking }) {
   return (
-    <section id="services" className="py-20 sm:py-24 bg-linen-200/50">
+    <section id="services" className="py-20 sm:py-24 bg-linen-50 border-b border-linen-300/80">
       <Container>
-        <SectionHeading
-          eyebrow="Specialized Care"
-          title="Therapeutic Services in Santa Monica & Across California"
-          subtitle="Grounding, evidence-based care tailored to the distinct emotional and physiological needs of high-functioning adults and professionals."
-        />
+        <div className="max-w-2xl mb-14 text-left">
+          <p className="text-xs uppercase tracking-widest font-semibold text-sage-700 mb-3">
+            Clinical Specialties
+          </p>
+          <h2 className="text-3xl sm:text-4xl font-serif text-charcoal-900 leading-tight">
+            Specialized Therapy in Santa Monica & Across California
+          </h2>
+          <p className="mt-4 text-base text-charcoal-700 leading-relaxed font-normal">
+            Grounding, evidence-based care tailored to the distinct emotional and physiological needs of high-functioning adults, professionals, and creatives.
+          </p>
+        </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {servicesData.map((service) => {
-            const Icon = iconMap[service.icon] || Sparkles;
+          {servicesData.map((service, index) => {
+            const indexNumber = `0${index + 1}`;
             return (
               <div
                 key={service.id}
-                className="group relative flex flex-col justify-between bg-linen-100 rounded-2xl p-8 border border-linen-300 hover:border-sage-500/40 shadow-soft hover:shadow-elevated transition-all duration-300"
+                className="flex flex-col justify-between bg-linen-100 rounded-xl p-8 border border-linen-300/90 shadow-subtle hover:border-sage-500/50 transition-colors"
               >
                 <div>
-                  {/* Icon Header */}
-                  <div className="w-12 h-12 rounded-xl bg-sage-100 flex items-center justify-center text-sage-600 mb-6 group-hover:scale-110 group-hover:bg-sage-200 transition-transform">
-                    <Icon className="w-6 h-6" />
+                  {/* Subtle Editorial Index */}
+                  <div className="flex items-center justify-between pb-6 mb-6 border-b border-linen-200">
+                    <span className="font-serif text-xs font-semibold tracking-widest text-sage-700">
+                      [{indexNumber}]
+                    </span>
+                    <span className="text-[11px] uppercase tracking-wider text-charcoal-600 font-medium">
+                      Adult Psychotherapy
+                    </span>
                   </div>
 
-                  {/* SEO Optimized Service Title */}
-                  <h3 className="font-serif text-2xl font-bold text-charcoal-900 mb-4 leading-snug group-hover:text-sage-700 transition-colors">
+                  {/* SEO-Optimized Service Title */}
+                  <h3 className="font-serif text-2xl text-charcoal-900 mb-4 leading-snug">
                     {service.title}
                   </h3>
 
-                  {/* SEO Optimized Description with Keyword */}
-                  <p className="text-charcoal-700 text-sm sm:text-base leading-relaxed mb-6 font-normal">
+                  {/* SEO-Optimized Description with Keyword */}
+                  <p className="text-charcoal-700 text-sm leading-relaxed mb-6 font-normal">
                     {service.description}
                   </p>
 
-                  {/* Focus Tags */}
-                  <div className="flex flex-wrap gap-2 mb-6">
+                  {/* Genuine Specialty Focus Areas */}
+                  <div className="space-y-1.5 mb-8">
                     {service.tags.map((tag, i) => (
-                      <span
-                        key={i}
-                        className="text-xs bg-linen-200 text-charcoal-800 px-3 py-1 rounded-full font-medium"
-                      >
-                        {tag}
-                      </span>
+                      <div key={i} className="text-xs text-charcoal-600 flex items-center gap-2">
+                        <span className="w-1.5 h-1.5 rounded-full bg-sage-400" />
+                        <span>{tag}</span>
+                      </div>
                     ))}
                   </div>
                 </div>
 
-                {/* Footer Action */}
-                <div className="pt-4 border-t border-linen-200 flex items-center justify-between">
-                  <span className="text-xs text-charcoal-500">
-                    Santa Monica & CA Online
-                  </span>
+                {/* Direct Action Link */}
+                <div className="pt-4 border-t border-linen-200/80">
                   <button
                     onClick={onOpenBooking}
-                    className="inline-flex items-center gap-1 text-sm font-semibold text-slateGreen-800 hover:text-terracotta-500 transition-colors"
+                    className="inline-flex items-center gap-2 text-xs uppercase tracking-wider font-semibold text-slateGreen-800 hover:text-terracotta-500 transition-colors"
                   >
-                    <span>Learn more</span>
-                    <ArrowUpRight className="w-4 h-4" />
+                    <span>Inquire About This Service</span>
+                    <ArrowRight className="w-3.5 h-3.5" />
                   </button>
                 </div>
               </div>

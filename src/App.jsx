@@ -6,6 +6,7 @@ import ServicesGrid from './components/home/ServicesGrid';
 import ApproachSection from './components/home/ApproachSection';
 import AboutPreview from './components/home/AboutPreview';
 import TestimonialsFAQ from './components/home/TestimonialsFAQ';
+import PracticeDetails from './components/home/PracticeDetails';
 import ConsultationCTA from './components/home/ConsultationCTA';
 import ConsultationModal from './components/home/ConsultationModal';
 
@@ -33,6 +34,9 @@ export default function App() {
 
         {/* About Dr. Maya Reynolds */}
         <AboutPreview onOpenBooking={handleOpenBooking} />
+
+        {/* Practice Logistics & Transparency */}
+        <PracticeDetails />
 
         {/* Frequently Asked Questions */}
         <TestimonialsFAQ />

@@ -4,17 +4,20 @@
 
 @layer base {
   html {
-    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
-    color: #242926;
-    background-color: #FBF9F5;
+    font-family: 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+    color: #1C211E;
+    background-color: #FAF8F5;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 
   h1, h2, h3, h4, .font-serif {
-    font-family: 'Playfair Display', Georgia, serif;
+    font-family: 'Newsreader', Georgia, serif;
+    font-feature-settings: "lnum" 1, "kern" 1;
   }
-}
 
-/* Custom smooth transitions */
-.smooth-hover {
-  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  ::selection {
+    background-color: #CAD7CC;
+    color: #182720;
+  }
 }
