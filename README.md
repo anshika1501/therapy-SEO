@@ -110,11 +110,8 @@ GrowMyTherapy/
 │       ├── dr-maya-reynolds.png       # Official portrait from Google Drive
 │       ├── santa-monica-office-1.jpg  # Office Suite from Drive folder
 │       └── santa-monica-office-2.jpg  # Consultation Room from Drive folder
-├── pictures/                          # Archive backup of all practice photography
-│   ├── dr-maya-reynolds.png
-│   ├── santa-monica-office-1.jpg
-│   └── santa-monica-office-2.jpg
 ├── screenshots/                       # Documentation screenshots
+
 │   ├── assessment-form-hero.png
 │   ├── assessment-form-services.png
 │   ├── homepage-hero.png
