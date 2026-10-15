@@ -146,7 +146,8 @@ export default function ConsultationModal({ isOpen, onClose }) {
                       checked={formData.sessionFormat === 'Santa Monica In-Person'}
                       onChange={(e) => setFormData({ ...formData, sessionFormat: e.target.value })}
                     />
-                    <span>Santa Monica Office</span>
+                    <span>Santa Monica (123th St)</span>
+
                   </label>
                   <label className="flex items-center gap-2 p-2.5 rounded-lg border border-linen-300 bg-linen-50 cursor-pointer hover:border-sage-500">
                     <input

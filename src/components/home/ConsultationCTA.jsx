@@ -6,9 +6,9 @@ import { therapistProfile } from '../../data/therapyData';
 
 export default function ConsultationCTA({ onOpenBooking }) {
   return (
-    <section className="py-20 bg-slateGreen-900 text-linen-100 relative">
+    <section className="py-24 bg-slateGreen-900 text-linen-100 relative">
       <Container>
-        <div className="max-w-3xl mx-auto text-center space-y-6">
+        <div className="max-w-3xl mx-auto text-center space-y-7">
           <p className="text-xs uppercase tracking-widest font-semibold text-sage-300">
             A Safe, Low-Pressure First Step
           </p>
@@ -18,16 +18,16 @@ export default function ConsultationCTA({ onOpenBooking }) {
           </h2>
 
           <p className="text-base sm:text-lg text-linen-300 max-w-xl mx-auto leading-relaxed font-normal">
-            Beginning therapy is an investment in your peace of mind. This introductory call is a quiet space to discuss what brings you in and determine if our work aligns.
+            Beginning therapy is a meaningful investment in yourself. This call is simply a chance for us to connect, discuss what you are navigating, and decide if we are the right fit.
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
             <Button
               size="lg"
               onClick={onOpenBooking}
-              className="bg-linen-100 text-slateGreen-900 hover:bg-linen-200 px-8 py-3.5 rounded-full font-medium shadow-sm group"
+              className="bg-linen-100 text-slateGreen-900 hover:bg-linen-200 px-8 py-3.5 rounded-full text-xs uppercase tracking-widest font-semibold shadow-paper group"
             >
-              <span>Request 15-Min Call</span>
+              <span>Schedule 15-Min Call</span>
               <ArrowRight className="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform" />
             </Button>
             <a
@@ -39,10 +39,10 @@ export default function ConsultationCTA({ onOpenBooking }) {
             </a>
           </div>
 
-          <div className="pt-6 border-t border-slateGreen-800 text-xs text-linen-400 flex flex-wrap justify-center gap-6">
+          <div className="pt-8 border-t border-slateGreen-800 text-xs text-linen-400 flex flex-wrap justify-center gap-8 font-normal">
             <span>&bull; Completely confidential</span>
-            <span>&bull; No obligation</span>
-            <span>&bull; In-person Santa Monica or CA Telehealth</span>
+            <span>&bull; Zero obligation</span>
+            <span>&bull; In-person 123th Street Office or California Telehealth</span>
           </div>
         </div>
       </Container>
