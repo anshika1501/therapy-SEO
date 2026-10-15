@@ -183,16 +183,18 @@ npm run preview
 
 | Commit | Description |
 |---|---|
-| `5f36275` | `feat(scaffold): initialize Vite React app with Tailwind theme and therapy data` |
-| `405aecf` | `feat(ui): add layout, header, footer, and common UI design components` |
-| `2d7d537` | `feat(homepage): implement Hero, SEO ServicesGrid, Approach, FAQ, and Consultation modal` |
-| `3975d8c` | `style: implement bespoke editorial typography and authentic clinical layout` |
-| `7c9d813` | `feat(profile): integrate portrait of Maya, Santa Monica office images, and complete bio` |
-| `77fa6d4` | `design: handcrafted editorial aesthetic with Fraunces typography and organic layout` |
-| `4ed2e49` | `feat(transitions): implement smooth landing fade-in and scroll-triggered reveal transitions` |
-| `d0f957f` | `chore: store images in pictures folder and organize profile assets` |
-| `03c7b98` | `refactor: refine tone and layout in favor of authentic human clinical communication` |
-| `623980d` | `docs(readme): embed homepage hero, full page, and form input screenshots` |
+| `2fe39ac` | `feat(scaffold): initialize Vite React app with Tailwind theme and therapy data` |
+| `4a38130` | `feat(ui): add layout, header, footer, and common UI design components` |
+| `d244b35` | `feat(homepage): implement Hero, SEO ServicesGrid, Approach, FAQ, and Consultation modal` |
+| `8dcd31c` | `style: implement bespoke editorial typography and clinical layout` |
+| `bd5296e` | `feat(profile): integrate portrait of Dr. Maya Reynolds, Santa Monica office images, and full bio` |
+| `b26e370` | `design: handcrafted editorial aesthetic with Fraunces typography and organic layout` |
+| `3517e3d` | `feat(transitions): implement smooth landing fade-in and scroll-triggered reveal transitions` |
+| `0dd619c` | `chore: organize practice photography assets` |
+| `27a1a40` | `refactor: refine copy and layout for authentic human clinical communication` |
+| `fd86490` | `docs(readme): add comprehensive documentation with embedded screenshots` |
+| `4e831dd` | `chore: remove duplicate pictures directory in favor of public/images` |
+
 
 ---
 
