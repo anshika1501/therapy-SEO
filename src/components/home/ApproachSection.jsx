@@ -29,8 +29,9 @@ export default function ApproachSection() {
                 The Santa Monica Office Setting
               </h4>
               <p className="text-xs text-charcoal-600 leading-relaxed">
-                Located on quiet Montana Avenue, our space provides a calm, confidential environment designed with natural light and organic materials to help your nervous system settle the moment you step inside.
+                Located at 123th Street 45 W in Santa Monica, our space provides a quiet, uncluttered environment with natural light to help your nervous system settle the moment you step inside.
               </p>
+
             </div>
           </div>
 

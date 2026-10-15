@@ -108,8 +108,9 @@ export default function Footer({ onOpenBooking }) {
               © {new Date().getFullYear()} Dr. Maya Reynolds, PsyD &bull; California Licensed Psychologist (PSY 31892).
             </p>
             <p>
-              Montana Avenue &bull; Santa Monica, California 90403
+              123th Street 45 W &bull; Santa Monica, CA 90401
             </p>
+
           </div>
         </div>
       </Container>

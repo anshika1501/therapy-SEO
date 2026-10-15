@@ -63,7 +63,7 @@ export default function Hero({ onOpenBooking }) {
               <div className="bg-linen-200/90 p-3 sm:p-4 rounded-2xl border border-linen-300 shadow-editorial">
                 <div className="aspect-[4/5] rounded-xl overflow-hidden bg-linen-300 relative">
                   <img
-                    src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=800&q=80"
+                    src={therapistProfile.image}
                     alt="Dr. Maya Reynolds, PsyD - Licensed Clinical Psychologist in Santa Monica"
                     className="w-full h-full object-cover object-top"
                   />
@@ -73,15 +73,16 @@ export default function Hero({ onOpenBooking }) {
                 <div className="pt-3.5 px-2 flex items-center justify-between text-xs text-charcoal-700">
                   <div>
                     <p className="font-serif font-medium text-charcoal-900 text-sm">Dr. Maya Reynolds, PsyD</p>
-                    <p className="text-[11px] text-charcoal-600">Licensed Clinical Psychologist (PSY 31892)</p>
+                    <p className="text-[11px] text-charcoal-600">Licensed Clinical Psychologist</p>
                   </div>
                   <span className="text-[11px] text-sage-700 bg-sage-100/80 px-2.5 py-1 rounded">
-                    Montana Ave Office
+                    Santa Monica Office
                   </span>
                 </div>
               </div>
             </div>
           </div>
+
         </div>
       </Container>
     </section>
